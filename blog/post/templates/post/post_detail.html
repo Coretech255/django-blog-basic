@@ -1,0 +1,56 @@
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     
+		<!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+    <nav>
+    <div class="nav-wrapper green darken-4">
+    <div class="container">
+    	 <a href="/" class="brand-logo">Blog</a>
+	      <ul id="nav-mobile" class="right hide-on-med-and-down">
+	        <li><a href="/">Home</a></li>
+	        <li><a href="/about">About</a></li>
+	        <li><a href="/contact">Contact</a></li>
+	      </ul>
+    </div>
+    </div>
+  </nav>
+        
+
+	<div class="container">
+		<h1 class="center-align">{{ post.title }}</h1>
+	</div>
+
+	<div class="container">
+		<div class="row">
+		    <div class="col s12 m12">
+		    <p>{{ post.preview }}</p>
+		    <br>
+		    <hr>
+			<p>{{ post.content }}</p>
+
+			<br>
+			<hr>
+			<iframe src="https://www.facebook.com/plugins/like.php?href=http://127.0.0.1:8000/post/{{ post.id }}&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=223203218388743" width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+		    </div>
+	  	</div>
+  	</div>
+      <!--JavaScript at end of body for optimized loading-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+    	document.addEventListener('DOMContentLoaded', function() {
+		    var elems = document.querySelectorAll('.sidenav');
+		    var instances = M.Sidenav.init(elems, options);
+		  });
+    </script>
+    </body>
+  </html>

@@ -1,0 +1,58 @@
+
+
+
+
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     
+		<!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+    <nav>
+    <div class="nav-wrapper green darken-4">
+    <div class="container">
+    	 <a href="/" class="brand-logo">Blog</a>
+	      <ul id="nav-mobile" class="right hide-on-med-and-down">
+	        <li><a href="/">Home</a></li>
+	        <li><a href="/about">About</a></li>
+	        <li><a href="/contact">Contact</a></li>
+	      </ul>
+    </div>
+    </div>
+  </nav>
+        
+
+	<div class="container">
+		<h1 class="center-align">All Post</h1>
+	</div>
+
+	<div class="container">
+	<div class="row">
+	{% for post in posts %}
+
+    <div class="col s12 m4">
+      <div class="card ">
+        <div class="card-content ">
+          <span class="card-title">	{{ post.title }}</span>
+          <p>{{ post.preview }}</p>
+        </div>
+        <div class="card-action">
+          <a href="/post/{{ post.id }}">Read More</a>
+        </div>
+      </div>
+    </div>
+	{% endfor %}
+  </div>
+  </div>
+      <!--JavaScript at end of body for optimized loading-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </body>
+  </html>
